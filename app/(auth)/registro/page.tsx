@@ -1,0 +1,20 @@
+import Link from "next/link";
+import AuthForm from "@/components/auth/AuthForm";
+export default function Register() {
+  return (
+    <main className="grid min-h-screen place-items-center bg-[#f0eadc] p-5">
+      <div className="w-full max-w-md">
+        <Link href="/" className="mb-6 block text-center text-xl font-black">
+          🐾 PetCare Manager
+        </Link>
+        <AuthForm mode="register" />
+        <p className="mt-5 text-center text-sm text-gray-600">
+          ¿Ya tienes cuenta?{" "}
+          <Link className="font-bold text-[#5f7f61]" href="/login">
+            Ingresa
+          </Link>
+        </p>
+      </div>
+    </main>
+  );
+}
