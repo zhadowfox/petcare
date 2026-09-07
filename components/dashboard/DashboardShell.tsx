@@ -7,7 +7,9 @@ import { useRouter } from "next/navigation";
 import { deletePet, getPets } from "@/lib/services/pets";
 import type { Pet } from "@/types/pet";
 import PetCard from "@/components/pets/PetCard";
+import { getVaccines } from "@/lib/services/vaccines";
 export default function DashboardShell() {
+  
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [pets, setPets] = useState<Pet[]>([]);
@@ -24,6 +26,7 @@ export default function DashboardShell() {
         console.log(u.uid);
         try {
           setPets(await getPets(u.uid));
+          
         } catch {
           setError(
             "No se pudieron cargar tus mascotas. Revisa la configuración de Firestore.",
@@ -77,10 +80,7 @@ export default function DashboardShell() {
           <p className="text-sm text-gray-500">Mascotas</p>
           <strong className="text-3xl">{pets.length}</strong>
         </div>
-        <div className="card p-5">
-          <p className="text-sm text-gray-500">Vacunas</p>
-          <strong className="text-3xl">—</strong>
-        </div>
+  
         <div className="card p-5">
           <p className="text-sm text-gray-500">Próximas citas</p>
           <strong className="text-3xl">—</strong>

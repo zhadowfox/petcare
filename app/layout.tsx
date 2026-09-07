@@ -1,17 +1,1 @@
-// import "./globals.css";
-import type { Metadata } from "next";
-export const metadata: Metadata = {
-  title: "PetCare Manager",
-  description: "Gestiona la información de tus mascotas en un solo lugar.",
-};
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="es">
-      <body>{children}</body>
-    </html>
-  );
-}
+import "./globals.css";import type {Metadata} from "next";export const metadata:Metadata={title:"PetCare Manager",description:"Gestiona la información de tus mascotas en un solo lugar."};export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="es"><body>{children}</body></html>}

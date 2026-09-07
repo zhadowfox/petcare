@@ -1,36 +1,42 @@
-# PetCare Manager — MVP
+# PetCare Manager
 
-Web app académica para gestionar mascotas.
+MVP académico construido con Next.js App Router, TypeScript, Tailwind CSS y Firebase.
 
-## Stack
-Next.js App Router, React, TypeScript, Tailwind CSS 4, Firebase Authentication, Firestore, Firebase Storage, React Hook Form, Zod, Lucide React y Vercel.
+Consulta la [documentación de pruebas, manual de usuario y soporte](docs/DOCUMENTACION_PROYECTO.md).
 
-## Incluye
+## Funcionalidades
 - Landing page
-- Registro e inicio de sesión
-- Dashboard protegido por autenticación
-- Agregar, consultar, editar y eliminar mascotas
-- Foto de mascota con Firebase Storage
-- Validación de formularios
-- Reglas básicas de Firestore y Storage
-- Estructura inicial para vacunas y citas
+- Registro e inicio de sesión con Firebase Authentication
+- CRUD de mascotas
+- Fotos con Firebase Storage
+- Historial de vacunas
+- Agenda veterinaria
+- Citas de lunes a sábado, 07:00–18:00, bloques de una hora
+- Dos veterinarios con asignación automática según disponibilidad
+- Cancelación de citas
+- Reglas de seguridad Firestore/Storage
 
 ## Instalación
 ```bash
 npm install
-```
-
-Copia `.env.example` a `.env.local` y coloca las credenciales de tu aplicación web de Firebase.
-
-En Firebase habilita Authentication con Email/Password, Firestore Database y Storage. Después configura las reglas de `firebase.rules` y `storage.rules`.
-
-Ejecuta:
-```bash
 npm run dev
 ```
 
-## Vercel
-Conecta el repositorio a Vercel y agrega las mismas variables `NEXT_PUBLIC_FIREBASE_*` en Environment Variables.
+Configura `.env.local` a partir de `.env.example`.
 
-## Nota
-La consulta de mascotas combina `where(ownerId == uid)` con `orderBy(createdAt desc)`. Firestore puede solicitar un índice compuesto la primera vez; usa el enlace que muestra el error para crearlo.
+## Firebase
+Habilita Email/Password en Authentication, crea Firestore y Storage.
+
+Para publicar reglas e índices con Firebase CLI:
+```bash
+firebase login
+firebase use petcare-85659
+firebase deploy --only firestore:rules,firestore:indexes,storage
+```
+
+## Agenda
+El sistema ofrece 11 horarios por veterinario:
+07:00, 08:00, 09:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00 y 17:00.
+Cada cita dura una hora y termina a las 18:00 como máximo. Domingo está bloqueado.
+
+La disponibilidad se protege con documentos de bloqueo `appointmentSlots`, de modo que una misma combinación fecha/hora/veterinario no pueda reservarse dos veces mediante una transacción de Firestore.

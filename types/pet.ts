@@ -1,5 +1,6 @@
 export type Species = "Perro" | "Gato" | "Ave" | "Otro";
 export type Gender = "Macho" | "Hembra";
+
 export interface Pet {
   id: string;
   ownerId: string;
@@ -14,14 +15,15 @@ export interface Pet {
   createdAt?: unknown;
   updatedAt?: unknown;
 }
+
 export interface Vaccine {
   id: string;
   petId: string;
   ownerId: string;
   name: string;
-  applicationDate: string;
-  nextDate?: string;
-  notes?: string;
+  date: string;
+  nextDate: string;
+  notes: string;
   createdAt?: unknown;
 }
 
@@ -29,17 +31,21 @@ export interface Appointment {
   id: string;
   petId: string;
   ownerId: string;
-  veterinarianId: string;
-  veterinarianName: string;
   date: string;
   time: string;
-  duration: number;
-  reason?: string;
-  status: "scheduled" | "cancelled" | "completed";
+  veterinarian: string;
+  reason: string;
+  notes: string;
+  status: "scheduled" | "cancelled";
   createdAt?: unknown;
 }
 
-export interface Veterinarian {
-  id: string;
-  name: string;
-}
+export const VETERINARIANS = [
+  { id: "vet-1", name: "Dra. Laura Gómez" },
+  { id: "vet-2", name: "Dr. Andrés Martínez" },
+] as const;
+
+export const APPOINTMENT_SLOTS = [
+  "07:00", "08:00", "09:00", "10:00", "11:00", "12:00",
+  "13:00", "14:00", "15:00", "16:00", "17:00",
+] as const;
