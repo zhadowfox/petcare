@@ -33,6 +33,12 @@ Las evidencias incluidas en este documento son **simuladas**. Representan el for
 | E2E-01 | Registro, creación de mascota y vacuna | Aplicación levantada; Firebase configurado; correo de prueba disponible | 1. Abrir `/registro`. 2. Registrar nombre, correo y contraseña de 6 o más caracteres. 3. Confirmar el acceso al dashboard. 4. Crear una mascota con nombre, especie, sexo y fecha. 5. Abrir el detalle y registrar una vacuna con nombre y fecha aplicada. | Se crea la cuenta, el usuario llega a `/dashboard`, la mascota aparece en su listado y la vacuna aparece en su historial después de guardar. |
 | E2E-02 | Agenda y cancelación de cita | Usuario autenticado con una mascota; fecha futura de lunes a sábado | 1. Abrir el detalle de la mascota. 2. Seleccionar fecha y horario disponible. 3. Elegir motivo y agendar. 4. Comprobar que la cita muestra fecha, hora y veterinario. 5. Cancelar y confirmar el diálogo. | La cita se guarda una sola vez, el horario queda bloqueado mientras está reservado, la cancelación elimina la cita y libera el horario. Un domingo o un horario pasado se rechaza. |
 
+Evidencia E2E-01
+![alt text]([http://url/to/img.png](https://github.com/zhadowfox/petcare/blob/6da1923d90332aa79f84f603c8b39ecbacc5ea5c/docs/prueba%20e2e%201.png))
+
+Evidencia E2E-01
+![alt text]([https://github.com/zhadowfox/petcare/blob/6da1923d90332aa79f84f603c8b39ecbacc5ea5c/docs/prueba%20e2e%202.png))
+
 ### 1.4 Evidencias simuladas
 
 | Evidencia | Representación simulada | Resultado |
