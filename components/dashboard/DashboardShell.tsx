@@ -80,8 +80,7 @@ export default function DashboardShell() {
           <p className="text-sm text-gray-500">Mascotas</p>
           <strong className="text-3xl">{pets.length}</strong>
         </div>
-  
-   
+    
       </section>
       <h2 className="mb-4 text-2xl font-black">Mis mascotas</h2>
       {pets.length === 0 ? (
