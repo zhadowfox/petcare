@@ -1,13 +1,13 @@
 # Gestión post-proyecto
 
-### 3.1 Seguimiento inicial
+### 1.1 Seguimiento inicial
 
 - **Día 0:** confirmar despliegue, variables de entorno, Authentication, Firestore, Storage, reglas e índices.
 - **Primera semana:** revisar errores de acceso, creación de mascotas, carga de fotos, vacunas y citas; verificar que no haya reservas duplicadas.
 - **Primer mes:** realizar una revisión semanal de uso, tiempos de respuesta, errores de Firebase y solicitudes de usuarios.
 - **Después del primer mes:** pasar a una revisión mensual y a seguimiento adicional cuando se publique una funcionalidad nueva.
 
-### 3.2 Soporte y niveles de atención
+### 1.2 Soporte y niveles de atención
 
 | Prioridad | Ejemplo | Respuesta objetivo | Acción |
 |---|---|---|---|
@@ -18,7 +18,7 @@
 
 Cada incidencia debe registrar fecha, usuario afectado, navegador, pasos para reproducir, mensaje de error, evidencia y resultado de la solución. Nunca se deben solicitar ni almacenar contraseñas en los tickets.
 
-### 3.3 Mantenimiento preventivo
+### 1.3 Mantenimiento preventivo
 
 1. Ejecutar `npm run lint` y las pruebas unitarias en cada cambio.
 2. Ejecutar ambos flujos E2E antes de cada entrega.
