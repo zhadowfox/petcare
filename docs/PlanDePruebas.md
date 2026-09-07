@@ -33,13 +33,13 @@ Las evidencias incluidas en este documento son **simuladas**. Representan el for
 | E2E-01 | Registro, creación de mascota y vacuna | Aplicación levantada; Firebase configurado; correo de prueba disponible | 1. Abrir `/registro`. 2. Registrar nombre, correo y contraseña de 6 o más caracteres. 3. Confirmar el acceso al dashboard. 4. Crear una mascota con nombre, especie, sexo y fecha. 5. Abrir el detalle y registrar una vacuna con nombre y fecha aplicada. | Se crea la cuenta, el usuario llega a `/dashboard`, la mascota aparece en su listado y la vacuna aparece en su historial después de guardar. |
 | E2E-02 | Agenda y cancelación de cita | Usuario autenticado con una mascota; fecha futura de lunes a sábado | 1. Abrir el detalle de la mascota. 2. Seleccionar fecha y horario disponible. 3. Elegir motivo y agendar. 4. Comprobar que la cita muestra fecha, hora y veterinario. 5. Cancelar y confirmar el diálogo. | La cita se guarda una sola vez, el horario queda bloqueado mientras está reservado, la cancelación elimina la cita y libera el horario. Un domingo o un horario pasado se rechaza. |
 
-Evidencia E2E-01
+Evidencia E2E-01 Se evidencia la mascota creada
 
+![Resultado prueba E2E - 01](https://github.com/zhadowfox/petcare/blob/6da1923d90332aa79f84f603c8b39ecbacc5ea5c/docs/prueba%20e2e%201.png)
 
-![alt text](https://github.com/zhadowfox/petcare/blob/6da1923d90332aa79f84f603c8b39ecbacc5ea5c/docs/prueba%20e2e%201.png)
+Evidencia E2E-02 - Se evidencia el bloqueo de hora para el dia 7 asi como solamente enseña horas luego de la hora de la prueba realizada, puesto que es imposible agendar una cita para una hora que ya paso de ese dia
 
-Evidencia E2E-01
-![alt text](https://github.com/zhadowfox/petcare/blob/6da1923d90332aa79f84f603c8b39ecbacc5ea5c/docs/prueba%20e2e%202.png)
+![Resultado prueba E2E - 02](https://github.com/zhadowfox/petcare/blob/6da1923d90332aa79f84f603c8b39ecbacc5ea5c/docs/prueba%20e2e%202.png)
 
 
 
@@ -52,4 +52,8 @@ Evidencia E2E-01
 | EV-03 | Selector de fecha con domingo `2026-09-13` y mensaje `El domingo no está disponible`. | **APROBADO:** la regla de calendario se comunica al usuario. |
 | EV-04 | Formulario de mascota con nombre `A` y peso `0`; mensajes de validación bajo ambos campos. | **APROBADO:** los datos inválidos no se envían. |
 
-Para una entrega formal, cada evidencia debe reemplazarse por una captura con fecha, navegador, identificador del caso y, cuando aplique, el documento creado en Firestore. También conviene adjuntar el resultado de `npm run lint` y los logs de ejecución de las pruebas automatizadas.
+Resultado de las pruebas unitarias
+
+![resultado pruebas unitarias](https://github.com/zhadowfox/petcare/blob/31a9524ae6446bf39bd9f57167584558fddb52bd/docs/resultado%20pruebas%20unitarias.png)
+
+
