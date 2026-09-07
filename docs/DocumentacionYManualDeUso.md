@@ -1,7 +1,7 @@
 
 # Documentación técnica y de usuario
 
-### 2.1 Manual básico de usuario
+### 1.1 Manual básico de usuario
 
 #### Acceso y registro
 
@@ -34,7 +34,7 @@
 5. El sistema asigna automáticamente uno de los veterinarios disponibles.
 6. Para cancelar, seleccionar el icono de papelera junto a la cita y luego click en aceptar.
 
-### 2.2 Tecnologías utilizadas
+### 1.2 Tecnologías utilizadas
 
 | Tecnología | Uso | Justificación |
 |---|---|---|
