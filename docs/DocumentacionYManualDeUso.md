@@ -1,5 +1,5 @@
 
-# 2. Documentación técnica y de usuario
+# Documentación técnica y de usuario
 
 ### 2.1 Manual básico de usuario
 
