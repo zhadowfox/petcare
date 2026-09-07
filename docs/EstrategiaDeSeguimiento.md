@@ -1,4 +1,4 @@
-## 3. Gestión post-proyecto
+### Gestión post-proyecto
 
 ### 3.1 Seguimiento inicial
 
