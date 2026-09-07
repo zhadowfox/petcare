@@ -81,10 +81,7 @@ export default function DashboardShell() {
           <strong className="text-3xl">{pets.length}</strong>
         </div>
   
-        <div className="card p-5">
-          <p className="text-sm text-gray-500">Próximas citas</p>
-          <strong className="text-3xl">—</strong>
-        </div>
+   
       </section>
       <h2 className="mb-4 text-2xl font-black">Mis mascotas</h2>
       {pets.length === 0 ? (
