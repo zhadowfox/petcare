@@ -40,3 +40,6 @@ El sistema ofrece 11 horarios por veterinario:
 Cada cita dura una hora y termina a las 18:00 como máximo. Domingo está bloqueado.
 
 La disponibilidad se protege con documentos de bloqueo `appointmentSlots`, de modo que una misma combinación fecha/hora/veterinario no pueda reservarse dos veces mediante una transacción de Firestore.
+
+### Pruebas
+En la carpeta /doc se encuentra el plan de pruebas unitarias y E2E junto con el manual de usuario, puedes ingresar para ver los resultados
